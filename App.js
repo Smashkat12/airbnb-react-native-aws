@@ -5,25 +5,17 @@
  * @format
  * @flow strict-local
  */
-
+import 'react-native-gesture-handler';
 import React from 'react';
 import {SafeAreaView, StatusBar} from 'react-native';
 
-import HomeScreen from './src/screens/Home';
-import SearchResultsScreen from './src/screens/SearchResults';
-import DestinationSearchScreen from './src/screens/DestinationSearch';
-import GuestsFilterScreen from './src/screens/GuestsFilter';
+import Router from './src/navigation/Router';
 
 const App: () => React$Node = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        {/* <HomeScreen /> */}
-        {/*  <SearchResultsScreen /> */}
-        {/* <DestinationSearchScreen /> */}
-        <GuestsFilterScreen />
-      </SafeAreaView>
+      <Router />
     </>
   );
 };
